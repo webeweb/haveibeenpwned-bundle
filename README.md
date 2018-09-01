@@ -1,7 +1,12 @@
 haveibeenpwned-bundle
 =====================
 
-[![Build Status](https://travis-ci.org/webeweb/haveibeenpwned-bundle.svg?branch=master)](https://travis-ci.org/webeweb/haveibeenpwned-bundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/haveibeenpwned-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/stable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/unstable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle) [![License](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/license)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle) [![composer.lock](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/composerlock)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![Build Status](https://travis-ci.org/webeweb/haveibeenpwned-bundle.svg?branch=master)](https://travis-ci.org/webeweb/haveibeenpwned-bundle)
+[![Coverage Status](https://coveralls.io/repos/github/webeweb/haveibeenpwned-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/stable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/unstable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![License](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/license)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![composer.lock](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/composerlock)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
@@ -11,7 +16,9 @@ haveibeenpwned-bundle
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net) [![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/) [![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
+[![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
+[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
 
 ---
 
