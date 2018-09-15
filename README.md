@@ -8,6 +8,8 @@ haveibeenpwned-bundle
 [![License](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/license)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 [![composer.lock](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/composerlock)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 
+Integrate HaveIBeenPwned API with Symony 2 and more.
+
 > IMPORTANT NOTICE: This package is still under development. Any changes will be
 > done without prior notice to consumers of this package. Of course this code
 > will become stable at a certain point, but for now, use at your own risk.
@@ -17,8 +19,7 @@ haveibeenpwned-bundle
 ## Compatibility
 
 [![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
-[![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
-[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0%7C%5E4.0-brightgreen.svg)](https://symfony.com)
 
 ---
 
