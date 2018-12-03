@@ -69,7 +69,7 @@ stable version of this package:
 ```bash
 $ mkdir haveibeenpwned-bundle
 $ cd haveibeenpwned-bundle
-$ git clone git@github.com:webeweb/haveibeenpwned-bundle.git .
+$ git clone https://github.com/webeweb/haveibeenpwned-bundle.git .
 $ composer install
 ```
 
