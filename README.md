@@ -67,9 +67,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir haveibeenpwned-bundle
+$ git clone https://github.com/webeweb/haveibeenpwned-bundle.git
 $ cd haveibeenpwned-bundle
-$ git clone https://github.com/webeweb/haveibeenpwned-bundle.git .
 $ composer install
 ```
 
