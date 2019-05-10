@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtension;
 
 /**
  * HaveIBeenPwned bundle.
@@ -19,6 +20,12 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle
  */
-class HaveIBeenPwnedBundle extends Bundle {
+class WBWHaveIBeenPwnedBundle extends Bundle {
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getContainerExtension() {
+        return new WBWHaveIBeenPwnedExtension();
+    }
 }
