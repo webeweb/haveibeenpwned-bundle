@@ -1,7 +1,7 @@
 haveibeenpwned-bundle
 =====================
 
-[![Build Status](https://travis-ci.org/webeweb/haveibeenpwned-bundle.svg?branch=master)](https://travis-ci.org/webeweb/haveibeenpwned-bundle)
+[![Build Status](https://travis-ci.com/webeweb/haveibeenpwned-bundle.svg?branch=master)](https://travis-ci.com/webeweb/haveibeenpwned-bundle)
 [![Coverage Status](https://coveralls.io/repos/github/webeweb/haveibeenpwned-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/stable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/unstable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
