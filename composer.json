@@ -3,6 +3,7 @@
     "type": "symfony-bundle",
     "description": "Integrate HaveIBeenPwned API with Symfony 2 and more",
     "keywords": [
+        "API",
         "bundle",
         "haveibeenpwned",
         "symfony",
@@ -16,11 +17,9 @@
             "homepage": "https://github.com/webeweb/"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": "^5.6|^7.0",
-        "webeweb/core-bundle": "^1.0",
+        "webeweb/core-bundle": "^2.0",
         "webeweb/haveibeenpwned-library": "^1.0"
     },
     "require-dev": {
