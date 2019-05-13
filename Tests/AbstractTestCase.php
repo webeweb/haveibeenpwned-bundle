@@ -12,11 +12,11 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests;
 
 use WBW\Bundle\CoreBundle\Tests\AbstractTestCase as TestCase;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\BreachedAccountInterface;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\BreachesInterface;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\BreachInterface;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\PasteAccountInterface;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\RangeInterface;
+use WBW\Library\HaveIBeenPwned\Entity\BreachedAccountInterface;
+use WBW\Library\HaveIBeenPwned\Entity\BreachesInterface;
+use WBW\Library\HaveIBeenPwned\Entity\BreachInterface;
+use WBW\Library\HaveIBeenPwned\Entity\PasteAccountInterface;
+use WBW\Library\HaveIBeenPwned\Entity\RangeInterface;
 
 /**
  * Abstract test case.
