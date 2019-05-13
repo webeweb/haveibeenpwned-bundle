@@ -13,7 +13,6 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\HaveIBeenPwnedEvents;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Bundle\SMSModeBundle\Event\SMSModeEvents;
 
 /**
  * HaveIBeenPwned events test.

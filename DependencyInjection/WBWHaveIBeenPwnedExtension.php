@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
  * HaveIBeenPwned extension.
  *
  * @author webeweb <https://github.com/webeweb/>
- * @package WBW\Bundle\SMSModeBundle\DependencyInjection
+ * @package WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection
  */
 class WBWHaveIBeenPwnedExtension extends Extension {
 
