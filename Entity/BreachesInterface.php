@@ -16,7 +16,7 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Entity;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Entity
  */
-interface BreachesEntityInterface extends HaveIBeenPwnedEntityInterface {
+interface BreachesInterface extends HaveIBeenPwnedEntityInterface {
 
     /**
      * Get the domain.
