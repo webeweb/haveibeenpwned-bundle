@@ -27,6 +27,13 @@ interface BreachedAccountInterface extends HaveIBeenPwnedEntityInterface {
     public function getHaveIBeenPwnedAccount();
 
     /**
+     * Get the domain.
+     *
+     * @return string Returns teh domain.
+     */
+    public function getHaveIBeenPwnedDomain();
+
+    /**
      * Get the include unverified.
      *
      * @return bool Returns the include unverified.
