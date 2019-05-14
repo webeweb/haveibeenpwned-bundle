@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Library\HaveIBeenPwned\Entity\BreachedAccountInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachedAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
 
@@ -20,13 +21,24 @@ use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
-class BreachedAccountEvent extends AbstractHaveIBeenPwnedEvent {
+class BreachedAccountEvent extends AbstractEvent {
 
     /**
      * Constructor.
+     *
+     * @param BreachedAccountInterface $entity The breached account.
      */
-    public function __construct() {
-        parent::__construct(HaveIBeenPwnedEvents::BREACHED_ACCOUNT, null);
+    public function __construct(BreachedAccountInterface $entity) {
+        parent::__construct(HaveIBeenPwnedEvents::BREACHED_ACCOUNT, $entity);
+    }
+
+    /**
+     * Get the breached account.
+     *
+     * @return BreachedAccountInterface Returns the breached account.
+     */
+    public function getBreachedAccount() {
+        return $this->getEntity();
     }
 
     /**

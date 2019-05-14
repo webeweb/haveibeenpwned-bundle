@@ -32,12 +32,14 @@ class BreachedAccountEventTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new BreachedAccountEvent();
+        $obj = new BreachedAccountEvent($this->breachedAccount);
 
         $this->assertEquals(HaveIBeenPwnedEvents::BREACHED_ACCOUNT, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->breachedAccount, $obj->getBreachedAccount());
     }
 
     /**
@@ -50,7 +52,7 @@ class BreachedAccountEventTest extends AbstractTestCase {
         // Set a Breached account request mock.
         $request = new BreachedAccountRequest();
 
-        $obj = new BreachedAccountEvent();
+        $obj = new BreachedAccountEvent($this->breachedAccount);
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
@@ -66,7 +68,7 @@ class BreachedAccountEventTest extends AbstractTestCase {
         // Set a Breaches response mock.
         $response = new BreachesResponse();
 
-        $obj = new BreachedAccountEvent();
+        $obj = new BreachedAccountEvent($this->breachedAccount);
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
