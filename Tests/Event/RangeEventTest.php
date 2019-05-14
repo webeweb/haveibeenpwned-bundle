@@ -32,12 +32,14 @@ class RangeEventTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new RangeEvent();
+        $obj = new RangeEvent($this->range);
 
         $this->assertEquals(HaveIBeenPwnedEvents::RANGE, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->range, $obj->getRange());
     }
 
     /**
@@ -47,10 +49,10 @@ class RangeEventTest extends AbstractTestCase {
      */
     public function testSetRequest() {
 
-        // Set a Rangees request mock.
+        // Set a Range request mock.
         $request = new RangeRequest();
 
-        $obj = new RangeEvent();
+        $obj = new RangeEvent($this->range);
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
@@ -66,7 +68,7 @@ class RangeEventTest extends AbstractTestCase {
         // Set a Range response mock.
         $response = new RangesResponse();
 
-        $obj = new RangeEvent();
+        $obj = new RangeEvent($this->range);
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());

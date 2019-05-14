@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Library\HaveIBeenPwned\Entity\RangeInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\RangeRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
 
@@ -20,13 +21,24 @@ use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
-class RangeEvent extends AbstractHaveIBeenPwnedEvent {
+class RangeEvent extends AbstractEvent {
 
     /**
      * Constructor.
+     *
+     * @param RangeInterface $entity The range.
      */
-    public function __construct() {
-        parent::__construct(HaveIBeenPwnedEvents::RANGE, null);
+    public function __construct(RangeInterface $entity) {
+        parent::__construct(HaveIBeenPwnedEvents::RANGE, $entity);
+    }
+
+    /**
+     * Get the range.
+     *
+     * @return RangeInterface Returns the range.
+     */
+    public function getRange() {
+        return $this->getEntity();
     }
 
     /**
