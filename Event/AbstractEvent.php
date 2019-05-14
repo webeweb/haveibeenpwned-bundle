@@ -11,19 +11,19 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
-use WBW\Bundle\CoreBundle\Event\AbstractEvent;
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\HaveIBeenPwnedEntityInterface;
+use WBW\Bundle\CoreBundle\Event\AbstractEvent as BaseEvent;
+use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
 use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
 
 /**
- * Abstract HaveIBeenPwned event.
+ * Abstract event.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  * @abstract
  */
-abstract class AbstractHaveIBeenPwnedEvent extends AbstractEvent {
+abstract class AbstractEvent extends BaseEvent {
 
     /**
      * Entity.
@@ -88,7 +88,7 @@ abstract class AbstractHaveIBeenPwnedEvent extends AbstractEvent {
      * Set the entity.
      *
      * @param HaveIBeenPwnedEntityInterface|null $entity The entity.
-     * @return AbstractHaveIBeenPwnedEvent Returns this HaveIBeenPwned event.
+     * @return AbstractEvent Returns this event.
      */
     protected function setEntity(HaveIBeenPwnedEntityInterface $entity = null) {
         $this->entity = $entity;
@@ -99,7 +99,7 @@ abstract class AbstractHaveIBeenPwnedEvent extends AbstractEvent {
      * Set the request.
      *
      * @param AbstractRequest $request The request.
-     * @return AbstractHaveIBeenPwnedEvent Returns this HaveIBeenPwned event.
+     * @return AbstractEvent Returns this event.
      */
     public function setRequest(AbstractRequest $request) {
         $this->request = $request;
@@ -110,7 +110,7 @@ abstract class AbstractHaveIBeenPwnedEvent extends AbstractEvent {
      * Set the response.
      *
      * @param AbstractResponse $response The response.
-     * @return AbstractHaveIBeenPwnedEvent Returns this HaveIBeenPwned event.
+     * @return AbstractEvent Returns this event.
      */
     public function setResponse(AbstractResponse $response) {
         $this->response = $response;

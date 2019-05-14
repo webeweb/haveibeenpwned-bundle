@@ -11,19 +11,19 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\HaveIBeenPwnedEntityInterface;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event\TestHaveIBeenPwnedEvent;
+use WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event\TestEvent;
+use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
 use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
 
 /**
- * Abstract response event test.
+ * Abstract event test.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event
  */
-class AbstractHaveIBeenPwnedEventTest extends AbstractTestCase {
+class AbstractEventTest extends AbstractTestCase {
 
     /**
      * Entity.
@@ -49,7 +49,7 @@ class AbstractHaveIBeenPwnedEventTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new TestHaveIBeenPwnedEvent("eventName", $this->entity);
+        $obj = new TestEvent("eventName", $this->entity);
 
         $this->assertEquals("eventName", $obj->getEventName());
         $this->assertSame($this->entity, $obj->getEntity());
@@ -67,7 +67,7 @@ class AbstractHaveIBeenPwnedEventTest extends AbstractTestCase {
         // Set a Request mock.
         $request = $this->getMockBuilder(AbstractRequest::class)->getMock();
 
-        $obj = new TestHaveIBeenPwnedEvent("eventName", $this->entity);
+        $obj = new TestEvent("eventName", $this->entity);
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
@@ -83,7 +83,7 @@ class AbstractHaveIBeenPwnedEventTest extends AbstractTestCase {
         // Set a Response mock.
         $response = $this->getMockBuilder(AbstractResponse::class)->getMock();
 
-        $obj = new TestHaveIBeenPwnedEvent("eventName", $this->entity);
+        $obj = new TestEvent("eventName", $this->entity);
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());

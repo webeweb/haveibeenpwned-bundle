@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event;
 
-use WBW\Bundle\HaveIBeenPwnedBundle\Entity\HaveIBeenPwnedEntityInterface;
-use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractHaveIBeenPwnedEvent;
+use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractEvent;
+use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
 use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
 
@@ -22,7 +22,7 @@ use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event
  */
-class TestHaveIBeenPwnedEvent extends AbstractHaveIBeenPwnedEvent {
+class TestEvent extends AbstractEvent {
 
     /**
      * {@inheritdoc}
