@@ -11,8 +11,9 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Library\HaveIBeenPwned\Entity\BreachInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\BreachResponse;
+use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
 
 /**
  * Breach event.
@@ -20,13 +21,24 @@ use WBW\Library\HaveIBeenPwned\Model\Response\BreachResponse;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
-class BreachEvent extends AbstractHaveIBeenPwnedEvent {
+class BreachEvent extends AbstractEvent {
 
     /**
      * Constructor.
+     *
+     * @param BreachInterface $entity The breach.
      */
-    public function __construct() {
-        parent::__construct(HaveIBeenPwnedEvents::BREACH, null);
+    public function __construct(BreachInterface $entity) {
+        parent::__construct(HaveIBeenPwnedEvents::BREACH, $entity);
+    }
+
+    /**
+     * Get the breach.
+     *
+     * @return BreachInterface Returns the breach.
+     */
+    public function getBreach() {
+        return $this->getEntity();
     }
 
     /**
@@ -41,7 +53,7 @@ class BreachEvent extends AbstractHaveIBeenPwnedEvent {
     /**
      * Get the breach response.
      *
-     * @return BreachResponse Returns the breach response.
+     * @return BreachesResponse Returns the breaches response.
      */
     public function getResponse() {
         return parent::getResponse();

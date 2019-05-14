@@ -32,12 +32,14 @@ class BreachEventTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new BreachEvent();
+        $obj = new BreachEvent($this->breach);
 
         $this->assertEquals(HaveIBeenPwnedEvents::BREACH, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->breach, $obj->getBreach());
     }
 
     /**
@@ -47,10 +49,10 @@ class BreachEventTest extends AbstractTestCase {
      */
     public function testSetRequest() {
 
-        // Set a Breaches request mock.
+        // Set a Breach request mock.
         $request = new BreachRequest();
 
-        $obj = new BreachEvent();
+        $obj = new BreachEvent($this->breach);
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
@@ -63,10 +65,10 @@ class BreachEventTest extends AbstractTestCase {
      */
     public function testSetResponse() {
 
-        // Set a Breaches response mock.
+        // Set a Breach response mock.
         $response = new BreachesResponse();
 
-        $obj = new BreachEvent();
+        $obj = new BreachEvent($this->breach);
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
