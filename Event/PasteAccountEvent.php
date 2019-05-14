@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Library\HaveIBeenPwned\Entity\PasteAccountInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
 
@@ -20,13 +21,24 @@ use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
-class PasteAccountEvent extends AbstractHaveIBeenPwnedEvent {
+class PasteAccountEvent extends AbstractEvent {
 
     /**
      * Constructor.
+     *
+     * @param PasteAccountInterface $entity The paste account.
      */
-    public function __construct() {
-        parent::__construct(HaveIBeenPwnedEvents::PASTE_ACCOUNT, null);
+    public function __construct(PasteAccountInterface $entity) {
+        parent::__construct(HaveIBeenPwnedEvents::PASTE_ACCOUNT, $entity);
+    }
+
+    /**
+     * Get the paste account.
+     *
+     * @return PasteAccountInterface Returns the paste account.
+     */
+    public function getPasteAccount() {
+        return $this->getEntity();
     }
 
     /**

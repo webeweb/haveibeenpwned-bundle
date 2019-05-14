@@ -32,12 +32,14 @@ class PasteAccountEventTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $obj = new PasteAccountEvent();
+        $obj = new PasteAccountEvent($this->pasteAccount);
 
         $this->assertEquals(HaveIBeenPwnedEvents::PASTE_ACCOUNT, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->pasteAccount, $obj->getPasteAccount());
     }
 
     /**
@@ -50,7 +52,7 @@ class PasteAccountEventTest extends AbstractTestCase {
         // Set a Paste account request mock.
         $request = new PasteAccountRequest();
 
-        $obj = new PasteAccountEvent();
+        $obj = new PasteAccountEvent($this->pasteAccount);
 
         $obj->setRequest($request);
         $this->assertSame($request, $obj->getRequest());
@@ -66,7 +68,7 @@ class PasteAccountEventTest extends AbstractTestCase {
         // Set a Pastes response mock.
         $response = new PastesResponse();
 
-        $obj = new PasteAccountEvent();
+        $obj = new PasteAccountEvent($this->pasteAccount);
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
