@@ -23,7 +23,7 @@
         "webeweb/haveibeenpwned-library": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.7.*|^7.0"
+        "phpunit/phpunit": "^5.7|^7.0"
     },
     "support": {
         "issues": "https://github.com/webeweb/haveibeenpwned-bundle/issues"
