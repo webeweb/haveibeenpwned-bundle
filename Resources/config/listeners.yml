@@ -1,2 +1,13 @@
 # Resources/config/listeners.yml
 services:
+
+    wbw.haveibeenpwned.event_listener:
+        class:     WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener
+        public:    true
+        tags:
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.breach",           method: "onBreach" }
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.breached_account", method: "onBreachedAccount" }
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.breaches",         method: "onBreaches" }
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.data_classes",     method: "onDataClasses" }
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.paste_account",    method: "onPasteAccount" }
+            - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.range",            method: "onRange" }

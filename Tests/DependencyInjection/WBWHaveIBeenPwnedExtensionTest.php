@@ -13,6 +13,7 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\DependencyInjection;
 
 use Exception;
 use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtension;
+use WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
 
 /**
@@ -34,5 +35,8 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
         $obj = new WBWHaveIBeenPwnedExtension();
 
         $this->assertNull($obj->load([], $this->containerBuilder));
+
+        // Event listeners.
+        $this->assertInstanceOf(HaveIBeenPwnedEventListener::class, $this->containerBuilder->get(HaveIBeenPwnedEventListener::SERVICE_NAME));
     }
 }
