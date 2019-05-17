@@ -16,7 +16,7 @@ use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
 
 /**
- * PasteAccount event.
+ * Paste account event.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
