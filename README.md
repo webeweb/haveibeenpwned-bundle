@@ -1,12 +1,13 @@
 haveibeenpwned-bundle
 =====================
 
-[![Build Status](https://travis-ci.com/webeweb/haveibeenpwned-bundle.svg?branch=master)](https://travis-ci.com/webeweb/haveibeenpwned-bundle)
-[![Coverage Status](https://coveralls.io/repos/github/webeweb/haveibeenpwned-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/stable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/v/unstable)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
-[![License](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/license)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
-[![composer.lock](https://poser.pugx.org/webeweb/haveibeenpwned-bundle/composerlock)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![Build Status](https://img.shields.io/travis/com/webeweb/haveibeenpwned-bundle/master.svg?style=flat-square)](https://travis-ci.com/webeweb/haveibeenpwned-bundle)
+[![Coverage Status](https://img.shields.io/coveralls/webeweb/haveibeenpwned-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/haveibeenpwned-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/haveibeenpwned-bundle/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![License](https://img.shields.io/packagist/l/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
+[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 
 Integrate HaveIBeenPwned API with Symony 2 and more.
 
@@ -18,8 +19,8 @@ Includes:
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
-[![Symfony](https://img.shields.io/badge/Symfony-%5E2.7%7C%5E3.0%7C%5E4.0-brightgreen.svg)](https://symfony.com)
+[![PHP](https://img.shields.io/packagist/php-v/webeweb/syntaxhighlighter-bundle.svg?style=flat-square)](http://php.net)
+[![Symfony](https://img.shields.io/badge/symfony-%5E2.7%7C%5E3.0%7C%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ---
 
