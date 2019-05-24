@@ -27,6 +27,13 @@ class WBWHaveIBeenPwnedExtension extends Extension {
     /**
      * {@inheritdoc}
      */
+    public function getAlias() {
+        return "wbw_haveibeenpwned";
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function load(array $configs, ContainerBuilder $container) {
 
         $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
@@ -34,6 +41,13 @@ class WBWHaveIBeenPwnedExtension extends Extension {
         $serviceLoader = new YamlFileLoader($container, $fileLocator);
         $serviceLoader->load("services.yml");
 
-        $serviceLoader->load("listeners.yml");
+        /** @var ConfigurationInterface $configuration */
+        $configuration = $this->getConfiguration($configs, $container);
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        if (true === $config["event_listeners"]) {
+            $serviceLoader->load("event_listeners.yml");
+        }
     }
 }

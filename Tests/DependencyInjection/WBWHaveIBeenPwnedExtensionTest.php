@@ -12,6 +12,8 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\DependencyInjection;
 
 use Exception;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\Configuration;
 use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtension;
 use WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
@@ -25,6 +27,51 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
 class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
 
     /**
+     * Configs.
+     *
+     * @var array
+     */
+    private $configs;
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function setUp() {
+        parent::setUp();
+
+        // Set a configs array mock.
+        $this->configs = [
+            "wbw_haveibeenpwned" => [
+                "event_listeners" => true,
+            ],
+        ];
+    }
+
+    /**
+     * Tests the getAlias() method.
+     *
+     * @return void
+     */
+    public function testGetAlias() {
+
+        $obj = new WBWHaveIBeenPwnedExtension();
+
+        $this->assertEquals("wbw_haveibeenpwned", $obj->getAlias());
+    }
+
+    /**
+     * Tests the getConfiguration() method.
+     *
+     * @return void
+     */
+    public function testGetConfiguration() {
+
+        $obj = new WBWHaveIBeenPwnedExtension();
+
+        $this->assertInstanceOf(Configuration::class, $obj->getConfiguration([], $this->containerBuilder));
+    }
+
+    /**
      * Tests the load() method.
      *
      * @return void
@@ -34,9 +81,33 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
 
         $obj = new WBWHaveIBeenPwnedExtension();
 
-        $this->assertNull($obj->load([], $this->containerBuilder));
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
 
-        // Event listeners.
+        // Event listeners
         $this->assertInstanceOf(HaveIBeenPwnedEventListener::class, $this->containerBuilder->get(HaveIBeenPwnedEventListener::SERVICE_NAME));
+    }
+
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoadWithoutEventListeners() {
+
+        // Set the configs mock.
+        $this->configs["wbw_haveibeenpwned"]["event_listeners"] = false;
+
+        $obj = new WBWHaveIBeenPwnedExtension();
+
+        $this->assertNull($obj->load($this->configs, $this->containerBuilder));
+
+        try {
+
+            $this->containerBuilder->get(HaveIBeenPwnedEventListener::SERVICE_NAME);
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
+            $this->assertContains(HaveIBeenPwnedEventListener::SERVICE_NAME, $ex->getMessage());
+        }
     }
 }
