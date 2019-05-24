@@ -1,9 +1,10 @@
 CHANGELOG
 =========
 
-### master
+### [1.1.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.1.0) (2019-05-24)
 
-- Reoganize documentation
+- Add Configuration
+- Reorganize documentation
 
 ### [1.0.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.0.0) (2019-05-13)
 
