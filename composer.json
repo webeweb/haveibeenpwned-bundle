@@ -25,8 +25,13 @@
     "require-dev": {
         "phpunit/phpunit": "^5.7|^7.0"
     },
-    "support": {
-        "issues": "https://github.com/webeweb/haveibeenpwned-bundle/issues"
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -41,12 +46,7 @@
             "WBW\\Bundle\\HaveIBeenPwnedBundle\\Tests\\": "Tests/"
         }
     },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.x-dev"
-        }
+    "support": {
+        "issues": "https://github.com/webeweb/haveibeenpwned-bundle/issues"
     }
 }
