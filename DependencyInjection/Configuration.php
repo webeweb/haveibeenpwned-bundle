@@ -13,6 +13,7 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use WBW\Bundle\CoreBundle\DependencyInjection\ConfigurationHelper;
 
 /**
  * Configuration.
@@ -27,14 +28,13 @@ class Configuration implements ConfigurationInterface {
      */
     public function getConfigTreeBuilder() {
 
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder(WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS);
 
-        $rootNode = $treeBuilder->root("wbw_core");
+        $rootNode = ConfigurationHelper::getRootNode($treeBuilder, WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS);
         $rootNode->children()
             ->booleanNode("event_listeners")->defaultTrue()->info("Load event listeners")->end()
             ->end();
 
         return $treeBuilder;
     }
-
 }

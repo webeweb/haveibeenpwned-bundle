@@ -41,10 +41,20 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
 
         // Set a configs array mock.
         $this->configs = [
-            "wbw_haveibeenpwned" => [
+            WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS => [
                 "event_listeners" => true,
             ],
         ];
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
+
+        $this->assertEquals("wbw_haveibeenpwned", WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS);
     }
 
     /**
@@ -56,7 +66,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
 
         $obj = new WBWHaveIBeenPwnedExtension();
 
-        $this->assertEquals("wbw_haveibeenpwned", $obj->getAlias());
+        $this->assertEquals(WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS, $obj->getAlias());
     }
 
     /**
@@ -95,7 +105,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
     public function testLoadWithoutEventListeners() {
 
         // Set the configs mock.
-        $this->configs["wbw_haveibeenpwned"]["event_listeners"] = false;
+        $this->configs[WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS]["event_listeners"] = false;
 
         $obj = new WBWHaveIBeenPwnedExtension();
 

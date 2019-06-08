@@ -25,10 +25,17 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 class WBWHaveIBeenPwnedExtension extends Extension {
 
     /**
+     * Extension alias.
+     *
+     * @var string
+     */
+    const EXTENSION_ALIAS = "wbw_haveibeenpwned";
+
+    /**
      * {@inheritdoc}
      */
     public function getAlias() {
-        return "wbw_haveibeenpwned";
+        return self::EXTENSION_ALIAS;
     }
 
     /**
