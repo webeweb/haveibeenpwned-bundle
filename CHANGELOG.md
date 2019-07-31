@@ -4,6 +4,7 @@ CHANGELOG
 ### [1.3.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.3.0) (2019-07-31)
 
 > IMPORTANT NOTICE: The following classes are deprecated
+>
 > - WBW\Bundle\HaveIBeenPwnedBundle\Event\HaveIBeenPwnedEvents
 
 - Add HaveIBeenPwned events
