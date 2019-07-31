@@ -13,6 +13,7 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\HaveIBeenPwnedEvents;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 
 /**
  * HaveIBeenPwned events test.
@@ -29,11 +30,11 @@ class HaveIBeenPwnedEventsTest extends AbstractTestCase {
      */
     public function testConstruct() {
 
-        $this->assertEquals("wbw.haveibeenpwned.event.breach", HaveIBeenPwnedEvents::BREACH);
-        $this->assertEquals("wbw.haveibeenpwned.event.breached_account", HaveIBeenPwnedEvents::BREACHED_ACCOUNT);
-        $this->assertEquals("wbw.haveibeenpwned.event.breaches", HaveIBeenPwnedEvents::BREACHES);
-        $this->assertEquals("wbw.haveibeenpwned.event.data_classes", HaveIBeenPwnedEvents::DATA_CLASSES);
-        $this->assertEquals("wbw.haveibeenpwned.event.paste_account", HaveIBeenPwnedEvents::PASTE_ACCOUNT);
-        $this->assertEquals("wbw.haveibeenpwned.event.range", HaveIBeenPwnedEvents::RANGE);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACH, HaveIBeenPwnedEvents::BREACH);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACHED_ACCOUNT, HaveIBeenPwnedEvents::BREACHED_ACCOUNT);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACHES, HaveIBeenPwnedEvents::BREACHES);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::DATA_CLASSES, HaveIBeenPwnedEvents::DATA_CLASSES);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::PASTE_ACCOUNT, HaveIBeenPwnedEvents::PASTE_ACCOUNT);
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::RANGE, HaveIBeenPwnedEvents::RANGE);
     }
 }

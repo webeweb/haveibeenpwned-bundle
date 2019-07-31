@@ -11,53 +11,15 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
+
 /**
  * HaveIBeenPwned events.
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
+ * @deprecated since HaveIBeenPwned bundle 1.3.0, use "WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents" instead.
  */
-class HaveIBeenPwnedEvents {
+class HaveIBeenPwnedEvents extends WBWHaveIBeenPwnedEvents {
 
-    /**
-     * Breach.
-     *
-     * @avr string
-     */
-    const BREACH = "wbw.haveibeenpwned.event.breach";
-
-    /**
-     * Breached account.
-     *
-     * @avr string
-     */
-    const BREACHED_ACCOUNT = "wbw.haveibeenpwned.event.breached_account";
-
-    /**
-     * Breaches.
-     *
-     * @avr string
-     */
-    const BREACHES = "wbw.haveibeenpwned.event.breaches";
-
-    /**
-     * Data classes.
-     *
-     * @avr string
-     */
-    const DATA_CLASSES = "wbw.haveibeenpwned.event.data_classes";
-
-    /**
-     * Paste account.
-     *
-     * @avr string
-     */
-    const PASTE_ACCOUNT = "wbw.haveibeenpwned.event.paste_account";
-
-    /**
-     * Range.
-     *
-     * @avr string
-     */
-    const RANGE = "wbw.haveibeenpwned.event.range";
 }
