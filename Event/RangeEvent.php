@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Entity\RangeInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\RangeRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
@@ -29,7 +30,7 @@ class RangeEvent extends AbstractEvent {
      * @param RangeInterface $entity The range.
      */
     public function __construct(RangeInterface $entity) {
-        parent::__construct(HaveIBeenPwnedEvents::RANGE, $entity);
+        parent::__construct(WBWHaveIBeenPwnedEvents::RANGE, $entity);
     }
 
     /**

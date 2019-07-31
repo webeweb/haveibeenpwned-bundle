@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Model\Request\DataClassesRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\DataClassesResponse;
 
@@ -26,7 +27,7 @@ class DataClassesEvent extends AbstractEvent {
      * Constructor.
      */
     public function __construct() {
-        parent::__construct(HaveIBeenPwnedEvents::DATA_CLASSES, null);
+        parent::__construct(WBWHaveIBeenPwnedEvents::DATA_CLASSES, null);
     }
 
     /**

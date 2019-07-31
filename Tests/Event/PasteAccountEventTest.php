@@ -11,9 +11,9 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
-use WBW\Bundle\HaveIBeenPwnedBundle\Event\HaveIBeenPwnedEvents;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
 
@@ -34,7 +34,7 @@ class PasteAccountEventTest extends AbstractTestCase {
 
         $obj = new PasteAccountEvent($this->pasteAccount);
 
-        $this->assertEquals(HaveIBeenPwnedEvents::PASTE_ACCOUNT, $obj->getEventName());
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::PASTE_ACCOUNT, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());

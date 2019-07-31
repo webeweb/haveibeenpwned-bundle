@@ -12,8 +12,8 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachesEvent;
-use WBW\Bundle\HaveIBeenPwnedBundle\Event\HaveIBeenPwnedEvents;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachesRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
 
@@ -34,7 +34,7 @@ class BreachesEventTest extends AbstractTestCase {
 
         $obj = new BreachesEvent($this->breaches);
 
-        $this->assertEquals(HaveIBeenPwnedEvents::BREACHES, $obj->getEventName());
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACHES, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());

@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
+use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Entity\BreachedAccountInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachedAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
@@ -29,7 +30,7 @@ class BreachedAccountEvent extends AbstractEvent {
      * @param BreachedAccountInterface $entity The breached account.
      */
     public function __construct(BreachedAccountInterface $entity) {
-        parent::__construct(HaveIBeenPwnedEvents::BREACHED_ACCOUNT, $entity);
+        parent::__construct(WBWHaveIBeenPwnedEvents::BREACHED_ACCOUNT, $entity);
     }
 
     /**
