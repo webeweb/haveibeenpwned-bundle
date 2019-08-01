@@ -22,7 +22,7 @@ use WBW\Library\HaveIBeenPwned\Exception\APIException;
 use WBW\Library\HaveIBeenPwned\Factory\RequestFactory;
 use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
-use WBW\Library\HaveIBeenPwned\Provider\APIProviderV2;
+use WBW\Library\HaveIBeenPwned\Provider\APIv2Provider;
 
 /**
  * HaveIBeenPwned event listener.
@@ -42,7 +42,7 @@ class HaveIBeenPwnedEventListener {
     /**
      * API provider.
      *
-     * @var APIProviderV2
+     * @var APIv2Provider
      */
     private $apiProvider;
 
@@ -50,7 +50,7 @@ class HaveIBeenPwnedEventListener {
      * Constructor.
      */
     public function __construct() {
-        $this->setApiProvider(new APIProviderV2());
+        $this->setApiProvider(new APIv2Provider());
     }
 
     /**
@@ -72,7 +72,7 @@ class HaveIBeenPwnedEventListener {
     /**
      * Get the API provider.
      *
-     * @return APIProviderV2 Returns the API provider.
+     * @return APIv2Provider Returns the API provider.
      */
     public function getApiProvider() {
         return $this->apiProvider;
@@ -171,10 +171,10 @@ class HaveIBeenPwnedEventListener {
     /**
      * Set the API provider.
      *
-     * @param APIProviderV2 $apiProvider The API provider.
+     * @param APIv2Provider $apiProvider The API provider.
      * @return HaveIBeenPwnedEventListener Returns this event listener.
      */
-    protected function setApiProvider(APIProviderV2 $apiProvider) {
+    protected function setApiProvider(APIv2Provider $apiProvider) {
         $this->apiProvider = $apiProvider;
         return $this;
     }
