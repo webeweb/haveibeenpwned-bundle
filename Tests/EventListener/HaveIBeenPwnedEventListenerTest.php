@@ -59,9 +59,10 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
 
         $this->assertEquals("wbw.haveibeenpwned.event_listener", HaveIBeenPwnedEventListener::SERVICE_NAME);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $this->assertNotNull($obj->getApiProvider());
+        $this->assertSame($this->logger, $obj->getLogger());
     }
 
     /**
@@ -75,7 +76,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Breach event mock.
         $breachEvent = new BreachEvent($this->breach);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $res = $obj->onBreach($breachEvent);
         $this->assertSame($breachEvent, $res);
@@ -95,7 +96,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Breached account event mock.
         $breachEvent = new BreachedAccountEvent($this->breachedAccount);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         try {
 
@@ -122,7 +123,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Breaches event mock.
         $breachesEvent = new BreachesEvent($this->breaches);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $res = $obj->onBreaches($breachesEvent);
         $this->assertSame($breachesEvent, $res);
@@ -142,7 +143,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Data classes event mock.
         $dataClassesEvent = new DataClassesEvent();
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $res = $obj->onDataClasses($dataClassesEvent);
         $this->assertSame($dataClassesEvent, $res);
@@ -162,7 +163,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Paste account event mock.
         $breachEvent = new PasteAccountEvent($this->pasteAccount);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $res = $obj->onPasteAccount($breachEvent);
         $this->assertSame($breachEvent, $res);
@@ -182,7 +183,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
         // Set a Range event mock.
         $rangeEvent = new RangeEvent($this->range);
 
-        $obj = new HaveIBeenPwnedEventListener();
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
 
         $res = $obj->onRange($rangeEvent);
         $this->assertSame($rangeEvent, $res);

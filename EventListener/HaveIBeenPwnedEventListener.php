@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\EventListener;
 
+use Psr\Log\LoggerInterface;
+use WBW\Bundle\CoreBundle\Service\LoggerTrait;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachedAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachesEvent;
@@ -32,6 +34,8 @@ use WBW\Library\HaveIBeenPwned\Provider\APIv2Provider;
  */
 class HaveIBeenPwnedEventListener {
 
+    use LoggerTrait;
+
     /**
      * Service name.
      *
@@ -48,9 +52,12 @@ class HaveIBeenPwnedEventListener {
 
     /**
      * Constructor.
+     *
+     * @param LoggerInterface $logger The logger.
      */
-    public function __construct() {
-        $this->setApiProvider(new APIv2Provider());
+    public function __construct(LoggerInterface $logger) {
+        $this->setApiProvider(new APIv2Provider($logger));
+        $this->setLogger($logger);
     }
 
     /**

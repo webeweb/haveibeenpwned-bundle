@@ -3,6 +3,7 @@ services:
 
     wbw.haveibeenpwned.event_listener:
         class:     WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener
+        arguments: ["@logger"]
         public:    true
         tags:
             - { name: "kernel.event_listener", event: "wbw.haveibeenpwned.event.breach",           method: "onBreach" }

@@ -1,8 +1,9 @@
 CHANGELOG
 =========
 
-### master
+### [1.4.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.4.0) (2019-08-08)
 
+- Improve logs
 - Update dependencies
 
 ### [1.3.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.3.0) (2019-07-31)
