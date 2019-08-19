@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [1.4.1](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.4.1) (2019-08-19)
+
+> IMPORTANT NOTICE:
+>
+> - WBW\Library\HaveIBeenPwned\Provider\APIv2Provider::pasteAccount() is now deprecated 
+
 ### [1.4.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.4.0) (2019-08-08)
 
 - Improve logs

@@ -165,11 +165,17 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
 
         $obj = new HaveIBeenPwnedEventListener($this->logger);
 
-        $res = $obj->onPasteAccount($breachEvent);
-        $this->assertSame($breachEvent, $res);
+        try {
 
-        $this->assertInstanceOf(PasteAccountRequest::class, $res->getRequest());
-        $this->assertInstanceOf(PastesResponse::class, $res->getResponse());
+            $res = $obj->onPasteAccount($breachEvent);
+            $this->assertSame($breachEvent, $res);
+            $this->assertInstanceOf(PasteAccountRequest::class, $res->getRequest());
+            $this->assertInstanceOf(PastesResponse::class, $res->getResponse());
+        } catch (Exception $ex) {
+
+            $this->assertInstanceOf(APIException::class, $ex);
+            $this->assertEquals(401, $ex->getPrevious()->getCode());
+        }
     }
 
     /**
