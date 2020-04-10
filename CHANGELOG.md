@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve unit tests
+
 ### [1.4.1](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.4.1) (2019-08-19)
 
 > IMPORTANT NOTICE:
