@@ -51,21 +51,6 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $this->assertEquals("wbw.haveibeenpwned.event_listener", HaveIBeenPwnedEventListener::SERVICE_NAME);
-
-        $obj = new HaveIBeenPwnedEventListener($this->logger);
-
-        $this->assertNotNull($obj->getApiProvider());
-        $this->assertSame($this->logger, $obj->getLogger());
-    }
-
-    /**
      * Tests the onBreach() method.
      *
      * @return void
@@ -196,6 +181,21 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
 
         $this->assertInstanceOf(RangeRequest::class, $res->getRequest());
         $this->assertInstanceOf(RangesResponse::class, $res->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $this->assertEquals("wbw.haveibeenpwned.event_listener", HaveIBeenPwnedEventListener::SERVICE_NAME);
+
+        $obj = new HaveIBeenPwnedEventListener($this->logger);
+
+        $this->assertNotNull($obj->getApiProvider());
+        $this->assertSame($this->logger, $obj->getLogger());
     }
 
     /**

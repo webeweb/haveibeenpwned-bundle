@@ -43,21 +43,6 @@ class AbstractEventTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new TestEvent("eventName", $this->entity);
-
-        $this->assertEquals("eventName", $obj->getEventName());
-        $this->assertSame($this->entity, $obj->getEntity());
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getResponse());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -87,5 +72,20 @@ class AbstractEventTest extends AbstractTestCase {
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new TestEvent("eventName", $this->entity);
+
+        $this->assertEquals("eventName", $obj->getEventName());
+        $this->assertSame($this->entity, $obj->getEntity());
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getResponse());
     }
 }

@@ -26,23 +26,6 @@ use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
 class PasteAccountEventTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new PasteAccountEvent($this->pasteAccount);
-
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::PASTE_ACCOUNT, $obj->getEventName());
-
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getResponse());
-
-        $this->assertSame($this->pasteAccount, $obj->getPasteAccount());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -72,5 +55,22 @@ class PasteAccountEventTest extends AbstractTestCase {
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new PasteAccountEvent($this->pasteAccount);
+
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::PASTE_ACCOUNT, $obj->getEventName());
+
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->pasteAccount, $obj->getPasteAccount());
     }
 }

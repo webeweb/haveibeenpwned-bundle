@@ -26,7 +26,7 @@ class WBWHaveIBeenPwnedEventsTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testConstruct() {
+    public function test__construct() {
 
         $this->assertEquals("wbw.haveibeenpwned.event.breach", WBWHaveIBeenPwnedEvents::BREACH);
         $this->assertEquals("wbw.haveibeenpwned.event.breached_account", WBWHaveIBeenPwnedEvents::BREACHED_ACCOUNT);

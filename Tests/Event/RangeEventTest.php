@@ -26,23 +26,6 @@ use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
 class RangeEventTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new RangeEvent($this->range);
-
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::RANGE, $obj->getEventName());
-
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getResponse());
-
-        $this->assertSame($this->range, $obj->getRange());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -72,5 +55,22 @@ class RangeEventTest extends AbstractTestCase {
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new RangeEvent($this->range);
+
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::RANGE, $obj->getEventName());
+
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->range, $obj->getRange());
     }
 }

@@ -26,23 +26,6 @@ use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
 class BreachedAccountEventTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new BreachedAccountEvent($this->breachedAccount);
-
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACHED_ACCOUNT, $obj->getEventName());
-
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getResponse());
-
-        $this->assertSame($this->breachedAccount, $obj->getBreachedAccount());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -72,5 +55,22 @@ class BreachedAccountEventTest extends AbstractTestCase {
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new BreachedAccountEvent($this->breachedAccount);
+
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::BREACHED_ACCOUNT, $obj->getEventName());
+
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getResponse());
+
+        $this->assertSame($this->breachedAccount, $obj->getBreachedAccount());
     }
 }

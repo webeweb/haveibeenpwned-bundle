@@ -26,21 +26,6 @@ use WBW\Library\HaveIBeenPwned\Model\Response\DataClassesResponse;
 class DataClassesEventTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
-
-        $obj = new DataClassesEvent();
-
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::DATA_CLASSES, $obj->getEventName());
-
-        $this->assertNull($obj->getRequest());
-        $this->assertNull($obj->getResponse());
-    }
-
-    /**
      * Tests the setRequest() method.
      *
      * @return void
@@ -70,5 +55,20 @@ class DataClassesEventTest extends AbstractTestCase {
 
         $obj->setResponse($response);
         $this->assertSame($response, $obj->getResponse());
+    }
+
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj = new DataClassesEvent();
+
+        $this->assertEquals(WBWHaveIBeenPwnedEvents::DATA_CLASSES, $obj->getEventName());
+
+        $this->assertNull($obj->getRequest());
+        $this->assertNull($obj->getResponse());
     }
 }
