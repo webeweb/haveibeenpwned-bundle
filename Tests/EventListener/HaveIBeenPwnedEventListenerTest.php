@@ -20,8 +20,8 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
+use WBW\Library\Core\Exception\ApiException;
 use WBW\Library\HaveIBeenPwned\API\RequestInterface;
-use WBW\Library\HaveIBeenPwned\Exception\APIException;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachedAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachesRequest;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachRequest;
@@ -93,7 +93,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
             $this->assertInstanceOf(BreachesResponse::class, $res->getResponse());
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(APIException::class, $ex);
+            $this->assertInstanceOf(ApiException::class, $ex);
         }
     }
 
@@ -158,7 +158,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
             $this->assertInstanceOf(PastesResponse::class, $res->getResponse());
         } catch (Exception $ex) {
 
-            $this->assertInstanceOf(APIException::class, $ex);
+            $this->assertInstanceOf(ApiException::class, $ex);
             $this->assertEquals(401, $ex->getPrevious()->getCode());
         }
     }

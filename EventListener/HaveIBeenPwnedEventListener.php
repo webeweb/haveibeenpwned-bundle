@@ -20,7 +20,7 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\DataClassesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
-use WBW\Library\HaveIBeenPwned\Exception\APIException;
+use WBW\Library\Core\Exception\ApiException;
 use WBW\Library\HaveIBeenPwned\Factory\RequestFactory;
 use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
@@ -90,7 +90,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachEvent $event The breach event.
      * @return BreachEvent Returns the breach event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onBreach(BreachEvent $event) {
 
@@ -105,7 +105,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachedAccountEvent $event The breached account event.
      * @return BreachedAccountEvent Returns the breached account event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onBreachedAccount(BreachedAccountEvent $event) {
 
@@ -120,7 +120,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachesEvent $event The breaches event.
      * @return BreachesEvent Returns the breaches event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onBreaches(BreachesEvent $event) {
 
@@ -135,7 +135,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param DataClassesEvent $event The data classes event.
      * @return DataClassesEvent Returns the data classes event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onDataClasses(DataClassesEvent $event) {
 
@@ -150,7 +150,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param PasteAccountEvent $event The paste account event.
      * @return PasteAccountEvent Returns the paste account event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onPasteAccount(PasteAccountEvent $event) {
 
@@ -165,7 +165,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @param RangeEvent $event The breach event.
      * @return RangeEvent Returns the breach event.
-     * @throws APIException Throws an API exception if an error occurs.
+     * @throws ApiException Throws an API exception if an error occurs.
      */
     public function onRange(RangeEvent $event) {
 
