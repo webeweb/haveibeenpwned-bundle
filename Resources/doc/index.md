@@ -2,7 +2,6 @@ DOCUMENTATION
 =============
 
 Breach
----
 
 Add the following code in a command or controller class:
 
@@ -26,7 +25,6 @@ foreach($response->getBreaches() as $current) {
 ```
 
 Breached account
----
 
 Add the following code in a command or controller class:
 
@@ -50,7 +48,6 @@ foreach($response->getBreaches() as $current) {
 ```
 
 Breaches
----
 
 Add the following code in a command or controller class:
 
@@ -74,7 +71,6 @@ foreach($response->getBreaches() as $current) {
 ```
 
 Data classes
----
 
 Add the following code in a command or controller class:
 
@@ -94,7 +90,6 @@ foreach($response->getDataClasses() as $current) {
 ```
 
 Paste account
----
 
 Add the following code in a command or controller class:
 
@@ -118,7 +113,6 @@ foreach($response->getPastes() as $current) {
 ```
 
 Range
----
 
 Add the following code in a command or controller class:
 
