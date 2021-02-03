@@ -24,7 +24,7 @@ CHANGELOG
 
 ### [1.5.1](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.5.1) (2020-06-03)
 
-- Update dodumentation
+- Update documentation
 
 ### [1.5.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.5.0) (2020-05-29)
 
