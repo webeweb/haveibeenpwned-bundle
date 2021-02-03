@@ -30,7 +30,7 @@ class DataClassesEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRequest() {
+    public function testSetRequest(): void {
 
         // Set a Data classes request mock.
         $request = new DataClassesRequest();
@@ -46,7 +46,7 @@ class DataClassesEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetResponse() {
+    public function testSetResponse(): void {
 
         // Set a Data classes response mock.
         $response = new DataClassesResponse();
@@ -62,7 +62,7 @@ class DataClassesEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new DataClassesEvent();
 

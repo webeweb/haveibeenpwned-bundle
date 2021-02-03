@@ -52,7 +52,7 @@ abstract class AbstractEvent extends BaseEvent {
      * @param string $eventName The event name.
      * @param HaveIBeenPwnedEntityInterface|null $entity The entity.
      */
-    protected function __construct($eventName, HaveIBeenPwnedEntityInterface $entity = null) {
+    protected function __construct(string $eventName, HaveIBeenPwnedEntityInterface $entity = null) {
         parent::__construct($eventName);
         $this->setEntity($entity);
     }

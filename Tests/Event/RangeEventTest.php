@@ -30,7 +30,7 @@ class RangeEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRequest() {
+    public function testSetRequest(): void {
 
         // Set a Range request mock.
         $request = new RangeRequest();
@@ -46,7 +46,7 @@ class RangeEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetResponse() {
+    public function testSetResponse(): void {
 
         // Set a Range response mock.
         $response = new RangesResponse();
@@ -62,7 +62,7 @@ class RangeEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new RangeEvent($this->range);
 

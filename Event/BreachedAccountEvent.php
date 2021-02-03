@@ -38,25 +38,25 @@ class BreachedAccountEvent extends AbstractEvent {
      *
      * @return BreachedAccountInterface Returns the breached account.
      */
-    public function getBreachedAccount() {
+    public function getBreachedAccount(): BreachedAccountInterface {
         return $this->getEntity();
     }
 
     /**
      * Get the breached account request.
      *
-     * @return BreachedAccountRequest Returns the breached account request.
+     * @return BreachedAccountRequest|null Returns the breached account request.
      */
-    public function getRequest() {
+    public function getRequest(): ?BreachedAccountRequest {
         return parent::getRequest();
     }
 
     /**
      * Get the breaches response.
      *
-     * @return BreachesResponse Returns the breaches response.
+     * @return BreachesResponse|null Returns the breaches response.
      */
-    public function getResponse() {
+    public function getResponse(): ?BreachesResponse {
         return parent::getResponse();
     }
 }

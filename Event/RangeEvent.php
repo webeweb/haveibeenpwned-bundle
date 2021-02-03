@@ -38,25 +38,25 @@ class RangeEvent extends AbstractEvent {
      *
      * @return RangeInterface Returns the range.
      */
-    public function getRange() {
+    public function getRange(): RangeInterface {
         return $this->getEntity();
     }
 
     /**
      * Get the range request.
      *
-     * @return RangeRequest Returns the range request.
+     * @return RangeRequest|null Returns the range request.
      */
-    public function getRequest() {
+    public function getRequest(): ?RangeRequest {
         return parent::getRequest();
     }
 
     /**
      * Get the ranges response.
      *
-     * @return RangesResponse Returns the ranges response.
+     * @return RangesResponse|null Returns the ranges response.
      */
-    public function getResponse() {
+    public function getResponse(): ?RangesResponse {
         return parent::getResponse();
     }
 }

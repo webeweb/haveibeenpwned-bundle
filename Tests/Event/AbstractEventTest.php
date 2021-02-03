@@ -35,7 +35,7 @@ class AbstractEventTest extends AbstractTestCase {
     /**
      * {inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a HaveIBeenPwned entity mock.
@@ -47,7 +47,7 @@ class AbstractEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRequest() {
+    public function testSetRequest(): void {
 
         // Set a Request mock.
         $request = $this->getMockBuilder(AbstractRequest::class)->getMock();
@@ -63,7 +63,7 @@ class AbstractEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetResponse() {
+    public function testSetResponse(): void {
 
         // Set a Response mock.
         $response = $this->getMockBuilder(AbstractResponse::class)->getMock();
@@ -79,7 +79,7 @@ class AbstractEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new TestEvent("eventName", $this->entity);
 

@@ -30,7 +30,7 @@ class PasteAccountEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetRequest() {
+    public function testSetRequest(): void {
 
         // Set a Paste account request mock.
         $request = new PasteAccountRequest();
@@ -46,7 +46,7 @@ class PasteAccountEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testSetResponse() {
+    public function testSetResponse(): void {
 
         // Set a Pastes response mock.
         $response = new PastesResponse();
@@ -62,7 +62,7 @@ class PasteAccountEventTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $obj = new PasteAccountEvent($this->pasteAccount);
 

@@ -44,7 +44,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     /**
      * {inheritdoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         $this->wait();
@@ -56,7 +56,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnBreach() {
+    public function testOnBreach(): void {
 
         // Set a Breach event mock.
         $breachEvent = new BreachEvent($this->breach);
@@ -76,7 +76,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnBreachedAccount() {
+    public function testOnBreachedAccount(): void {
 
         // Set a Breached account event mock.
         $breachEvent = new BreachedAccountEvent($this->breachedAccount);
@@ -103,7 +103,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnBreaches() {
+    public function testOnBreaches(): void {
 
         // Set a Breaches event mock.
         $breachesEvent = new BreachesEvent($this->breaches);
@@ -123,7 +123,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnDataClasses() {
+    public function testOnDataClasses(): void {
 
         // Set a Data classes event mock.
         $dataClassesEvent = new DataClassesEvent();
@@ -143,7 +143,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnPasteAccount() {
+    public function testOnPasteAccount(): void {
 
         // Set a Paste account event mock.
         $breachEvent = new PasteAccountEvent($this->pasteAccount);
@@ -169,7 +169,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testOnRange() {
+    public function testOnRange(): void {
 
         // Set a Range event mock.
         $rangeEvent = new RangeEvent($this->range);
@@ -188,7 +188,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw.haveibeenpwned.event_listener", HaveIBeenPwnedEventListener::SERVICE_NAME);
 

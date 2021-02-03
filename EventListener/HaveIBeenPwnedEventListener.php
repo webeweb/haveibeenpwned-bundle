@@ -11,6 +11,8 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\EventListener;
 
+use GuzzleHttp\Exception\GuzzleException;
+use InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use WBW\Bundle\CoreBundle\Service\LoggerTrait;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractEvent;
@@ -68,7 +70,7 @@ class HaveIBeenPwnedEventListener {
      * @param AbstractResponse $response The response.
      * @return AbstractEvent Returns the event.
      */
-    protected function beforeReturnEvent(AbstractEvent $event, AbstractRequest $request, AbstractResponse $response) {
+    protected function beforeReturnEvent(AbstractEvent $event, AbstractRequest $request, AbstractResponse $response): AbstractEvent {
 
         $event->setRequest($request);
         $event->setResponse($response);
@@ -81,7 +83,7 @@ class HaveIBeenPwnedEventListener {
      *
      * @return APIv2Provider Returns the API provider.
      */
-    public function getApiProvider() {
+    public function getApiProvider(): APIv2Provider {
         return $this->apiProvider;
     }
 
@@ -90,9 +92,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachEvent $event The breach event.
      * @return BreachEvent Returns the breach event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onBreach(BreachEvent $event) {
+    public function onBreach(BreachEvent $event): BreachEvent {
 
         $request  = RequestFactory::newBreachRequest($event->getBreach());
         $response = $this->getApiProvider()->breach($request);
@@ -105,9 +109,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachedAccountEvent $event The breached account event.
      * @return BreachedAccountEvent Returns the breached account event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onBreachedAccount(BreachedAccountEvent $event) {
+    public function onBreachedAccount(BreachedAccountEvent $event): BreachedAccountEvent {
 
         $request  = RequestFactory::newBreachedAccountRequest($event->getBreachedAccount());
         $response = $this->getApiProvider()->breachedAccount($request);
@@ -120,9 +126,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param BreachesEvent $event The breaches event.
      * @return BreachesEvent Returns the breaches event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onBreaches(BreachesEvent $event) {
+    public function onBreaches(BreachesEvent $event): BreachesEvent {
 
         $request  = RequestFactory::newBreachesRequest($event->getBreaches());
         $response = $this->getApiProvider()->breaches($request);
@@ -135,9 +143,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param DataClassesEvent $event The data classes event.
      * @return DataClassesEvent Returns the data classes event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onDataClasses(DataClassesEvent $event) {
+    public function onDataClasses(DataClassesEvent $event): DataClassesEvent {
 
         $request  = RequestFactory::newDataClassesRequest();
         $response = $this->getApiProvider()->dataClasses($request);
@@ -150,9 +160,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param PasteAccountEvent $event The paste account event.
      * @return PasteAccountEvent Returns the paste account event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onPasteAccount(PasteAccountEvent $event) {
+    public function onPasteAccount(PasteAccountEvent $event): PasteAccountEvent {
 
         $request  = RequestFactory::newPasteAccountRequest($event->getPasteAccount());
         $response = $this->getApiProvider()->pasteAccount($request);
@@ -165,9 +177,11 @@ class HaveIBeenPwnedEventListener {
      *
      * @param RangeEvent $event The breach event.
      * @return RangeEvent Returns the breach event.
+     * @throws InvalidArgumentException Throws an invalid argument exception if a parameter is missing.
+     * @throws GuzzleException Throws a GUzzle exception if an error occurs.
      * @throws ApiException Throws an API exception if an error occurs.
      */
-    public function onRange(RangeEvent $event) {
+    public function onRange(RangeEvent $event): RangeEvent {
 
         $request  = RequestFactory::newRangeRequest($event->getRange());
         $response = $this->getApiProvider()->range($request);
@@ -181,7 +195,7 @@ class HaveIBeenPwnedEventListener {
      * @param APIv2Provider $apiProvider The API provider.
      * @return HaveIBeenPwnedEventListener Returns this event listener.
      */
-    protected function setApiProvider(APIv2Provider $apiProvider) {
+    protected function setApiProvider(APIv2Provider $apiProvider): HaveIBeenPwnedEventListener {
         $this->apiProvider = $apiProvider;
         return $this;
     }

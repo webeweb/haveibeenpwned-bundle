@@ -27,7 +27,7 @@ class WBWHaveIBeenPwnedBundleTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetContainerExtension() {
+    public function testGetContainerExtension(): void {
 
         $obj = new WBWHaveIBeenPwnedBundle();
 

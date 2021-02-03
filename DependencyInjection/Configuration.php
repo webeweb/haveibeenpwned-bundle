@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface {
     /**
      * {@inheritDoc}
      */
-    public function getConfigTreeBuilder() {
+    public function getConfigTreeBuilder(): TreeBuilder {
 
         $treeBuilder = new TreeBuilder(WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS);
 

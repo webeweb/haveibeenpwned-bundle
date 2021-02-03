@@ -36,7 +36,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
     /**
      * {@inheritDoc}
      */
-    protected function setUp() {
+    protected function setUp(): void {
         parent::setUp();
 
         // Set a configs array mock.
@@ -52,7 +52,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetAlias() {
+    public function testGetAlias(): void {
 
         $obj = new WBWHaveIBeenPwnedExtension();
 
@@ -64,7 +64,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testGetConfiguration() {
+    public function testGetConfiguration(): void {
 
         $obj = new WBWHaveIBeenPwnedExtension();
 
@@ -77,7 +77,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      * @return void
      * @throws Exception Throws an exception if an error occurs.
      */
-    public function testLoad() {
+    public function testLoad(): void {
 
         $obj = new WBWHaveIBeenPwnedExtension();
 
@@ -92,7 +92,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function testLoadWithoutEventListeners() {
+    public function testLoadWithoutEventListeners(): void {
 
         // Set the configs mock.
         $this->configs[WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS]["event_listeners"] = false;
@@ -116,7 +116,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      *
      * @return void
      */
-    public function test__construct() {
+    public function test__construct(): void {
 
         $this->assertEquals("wbw_haveibeenpwned", WBWHaveIBeenPwnedExtension::EXTENSION_ALIAS);
     }

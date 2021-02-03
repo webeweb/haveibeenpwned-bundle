@@ -38,25 +38,25 @@ class PasteAccountEvent extends AbstractEvent {
      *
      * @return PasteAccountInterface Returns the paste account.
      */
-    public function getPasteAccount() {
+    public function getPasteAccount(): PasteAccountInterface {
         return $this->getEntity();
     }
 
     /**
      * Get the paste account request.
      *
-     * @return PasteAccountRequest Returns the paste account request.
+     * @return PasteAccountRequest|null Returns the paste account request.
      */
-    public function getRequest() {
+    public function getRequest(): ?PasteAccountRequest {
         return parent::getRequest();
     }
 
     /**
      * Get the pastes response.
      *
-     * @return PastesResponse Returns the pastes response.
+     * @return PastesResponse|null Returns the pastes response.
      */
-    public function getResponse() {
+    public function getResponse(): ?PastesResponse {
         return parent::getResponse();
     }
 }

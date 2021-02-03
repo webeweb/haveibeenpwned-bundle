@@ -38,25 +38,25 @@ class BreachesEvent extends AbstractEvent {
      *
      * @return BreachesInterface Returns the breaches.
      */
-    public function getBreaches() {
+    public function getBreaches(): BreachesInterface {
         return $this->getEntity();
     }
 
     /**
      * Get the breaches request.
      *
-     * @return BreachesRequest Returns the breaches request.
+     * @return BreachesRequest|null Returns the breaches request.
      */
-    public function getRequest() {
+    public function getRequest(): ?BreachesRequest {
         return parent::getRequest();
     }
 
     /**
      * Get the breaches response.
      *
-     * @return BreachesResponse Returns the breaches response.
+     * @return BreachesResponse|null Returns the breaches response.
      */
-    public function getResponse() {
+    public function getResponse(): ?BreachesResponse {
         return parent::getResponse();
     }
 }
