@@ -11,6 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle;
 
+use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtension;
 
@@ -25,7 +26,7 @@ class WBWHaveIBeenPwnedBundle extends Bundle {
     /**
      * {@inheritDoc}
      */
-    public function getContainerExtension() {
+    public function getContainerExtension(): Extension {
         return new WBWHaveIBeenPwnedExtension();
     }
 }
