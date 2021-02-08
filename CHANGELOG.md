@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.6.1](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.1) (2021-02-08)
+
+- Replace Class:: by static::
+
 ### [1.6.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.0) (2021-02-03)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
