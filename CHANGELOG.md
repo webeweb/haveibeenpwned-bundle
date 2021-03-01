@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.6.2](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.2) (2021-03-01)
+
+- Improve code quality
+
 ### [1.6.1](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.1) (2021-02-08)
 
 - Replace Class:: by static::
