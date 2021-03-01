@@ -36,7 +36,7 @@ class WBWHaveIBeenPwnedExtension extends Extension {
      * {@inheritdoc}
      */
     public function getAlias(): string {
-        return static::EXTENSION_ALIAS;
+        return self::EXTENSION_ALIAS;
     }
 
     /**
