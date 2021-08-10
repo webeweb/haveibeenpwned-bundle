@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.6.3](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.3) (2021-08-10)
+
+- Improve event names
+
 ### [1.6.2](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.6.2) (2021-03-01)
 
 - Improve code quality
