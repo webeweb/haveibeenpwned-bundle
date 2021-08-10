@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
-use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Entity\PasteAccountInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
@@ -25,12 +24,19 @@ use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
 class PasteAccountEvent extends AbstractEvent {
 
     /**
+     * Event name.
+     *
+     * @var string
+     */
+    const EVENT_NAME = "wbw.haveibeenpwned.event.paste_account";
+
+    /**
      * Constructor.
      *
      * @param PasteAccountInterface $entity The paste account.
      */
     public function __construct(PasteAccountInterface $entity) {
-        parent::__construct(WBWHaveIBeenPwnedEvents::PASTE_ACCOUNT, $entity);
+        parent::__construct(self::EVENT_NAME, $entity);
     }
 
     /**

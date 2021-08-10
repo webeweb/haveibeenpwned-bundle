@@ -13,7 +13,6 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\DataClassesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Model\Request\DataClassesRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\DataClassesResponse;
 
@@ -64,9 +63,11 @@ class DataClassesEventTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.haveibeenpwned.event.data_classes", DataClassesEvent::EVENT_NAME);
+
         $obj = new DataClassesEvent();
 
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::DATA_CLASSES, $obj->getEventName());
+        $this->assertEquals(DataClassesEvent::EVENT_NAME, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());

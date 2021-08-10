@@ -13,7 +13,6 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Model\Request\RangeRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
 
@@ -64,9 +63,11 @@ class RangeEventTest extends AbstractTestCase {
      */
     public function test__construct(): void {
 
+        $this->assertEquals("wbw.haveibeenpwned.event.range", RangeEvent::EVENT_NAME);
+
         $obj = new RangeEvent($this->range);
 
-        $this->assertEquals(WBWHaveIBeenPwnedEvents::RANGE, $obj->getEventName());
+        $this->assertEquals(RangeEvent::EVENT_NAME, $obj->getEventName());
 
         $this->assertNull($obj->getRequest());
         $this->assertNull($obj->getResponse());

@@ -11,7 +11,6 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
-use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedEvents;
 use WBW\Library\HaveIBeenPwned\Entity\BreachesInterface;
 use WBW\Library\HaveIBeenPwned\Model\Request\BreachesRequest;
 use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
@@ -25,12 +24,19 @@ use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
 class BreachesEvent extends AbstractEvent {
 
     /**
+     * Event name.
+     *
+     * @var string
+     */
+    const EVENT_NAME = "wbw.haveibeenpwned.event.breaches";
+
+    /**
      * Constructor.
      *
      * @param BreachesInterface $entity The breaches.
      */
     public function __construct(BreachesInterface $entity) {
-        parent::__construct(WBWHaveIBeenPwnedEvents::BREACHES, $entity);
+        parent::__construct(self::EVENT_NAME, $entity);
     }
 
     /**
