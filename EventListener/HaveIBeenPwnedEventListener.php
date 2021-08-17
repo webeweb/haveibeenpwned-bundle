@@ -22,11 +22,11 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\DataClassesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
-use WBW\Library\Core\Exception\ApiException;
 use WBW\Library\HaveIBeenPwned\Factory\RequestFactory;
-use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
-use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
 use WBW\Library\HaveIBeenPwned\Provider\APIv2Provider;
+use WBW\Library\HaveIBeenPwned\Request\AbstractRequest;
+use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
+use WBW\Library\Provider\Exception\ApiException;
 
 /**
  * HaveIBeenPwned event listener.

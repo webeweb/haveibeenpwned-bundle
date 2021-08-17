@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
 use WBW\Bundle\CoreBundle\Event\AbstractEvent as BaseEvent;
 use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
-use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
-use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
+use WBW\Library\HaveIBeenPwned\Request\AbstractRequest;
+use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
 
 /**
  * Abstract event.

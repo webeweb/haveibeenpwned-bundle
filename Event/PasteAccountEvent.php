@@ -12,8 +12,8 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
 use WBW\Library\HaveIBeenPwned\Entity\PasteAccountInterface;
-use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
+use WBW\Library\HaveIBeenPwned\Request\PasteAccountRequest;
+use WBW\Library\HaveIBeenPwned\Response\PastesResponse;
 
 /**
  * Paste account event.

@@ -12,8 +12,8 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
 use WBW\Library\HaveIBeenPwned\Entity\BreachedAccountInterface;
-use WBW\Library\HaveIBeenPwned\Model\Request\BreachedAccountRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
+use WBW\Library\HaveIBeenPwned\Request\BreachedAccountRequest;
+use WBW\Library\HaveIBeenPwned\Response\BreachesResponse;
 
 /**
  * Breached account event.

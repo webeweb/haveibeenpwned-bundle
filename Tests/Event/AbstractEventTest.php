@@ -14,8 +14,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event\TestEvent;
 use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
-use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
-use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
+use WBW\Library\HaveIBeenPwned\Request\AbstractRequest;
+use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
 
 /**
  * Abstract event test.

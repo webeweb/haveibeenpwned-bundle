@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\DataClassesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Library\HaveIBeenPwned\Model\Request\DataClassesRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\DataClassesResponse;
+use WBW\Library\HaveIBeenPwned\Request\DataClassesRequest;
+use WBW\Library\HaveIBeenPwned\Response\DataClassesResponse;
 
 /**
  * Data classes event test.

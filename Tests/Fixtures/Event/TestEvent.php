@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Fixtures\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractEvent;
 use WBW\Library\HaveIBeenPwned\Entity\HaveIBeenPwnedEntityInterface;
-use WBW\Library\HaveIBeenPwned\Model\AbstractRequest;
-use WBW\Library\HaveIBeenPwned\Model\AbstractResponse;
+use WBW\Library\HaveIBeenPwned\Request\AbstractRequest;
+use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
 
 /**
  * Test HaveIBeenPwned event.

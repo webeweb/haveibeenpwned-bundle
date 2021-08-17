@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
-use WBW\Library\HaveIBeenPwned\Model\Request\DataClassesRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\DataClassesResponse;
+use WBW\Library\HaveIBeenPwned\Request\DataClassesRequest;
+use WBW\Library\HaveIBeenPwned\Response\DataClassesResponse;
 
 /**
  * Data classes event.

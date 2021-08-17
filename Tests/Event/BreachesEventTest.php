@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Library\HaveIBeenPwned\Model\Request\BreachesRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\BreachesResponse;
+use WBW\Library\HaveIBeenPwned\Request\BreachesRequest;
+use WBW\Library\HaveIBeenPwned\Response\BreachesResponse;
 
 /**
  * Breaches event test.

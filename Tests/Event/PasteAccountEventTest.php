@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Library\HaveIBeenPwned\Model\Request\PasteAccountRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\PastesResponse;
+use WBW\Library\HaveIBeenPwned\Request\PasteAccountRequest;
+use WBW\Library\HaveIBeenPwned\Response\PastesResponse;
 
 /**
  * PasteAccount event test.

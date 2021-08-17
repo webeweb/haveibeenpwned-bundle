@@ -13,8 +13,8 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event;
 
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Library\HaveIBeenPwned\Model\Request\RangeRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
+use WBW\Library\HaveIBeenPwned\Request\RangeRequest;
+use WBW\Library\HaveIBeenPwned\Response\RangesResponse;
 
 /**
  * Range event test.

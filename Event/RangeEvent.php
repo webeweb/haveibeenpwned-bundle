@@ -12,8 +12,8 @@
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Event;
 
 use WBW\Library\HaveIBeenPwned\Entity\RangeInterface;
-use WBW\Library\HaveIBeenPwned\Model\Request\RangeRequest;
-use WBW\Library\HaveIBeenPwned\Model\Response\RangesResponse;
+use WBW\Library\HaveIBeenPwned\Request\RangeRequest;
+use WBW\Library\HaveIBeenPwned\Response\RangesResponse;
 
 /**
  * Range event.
