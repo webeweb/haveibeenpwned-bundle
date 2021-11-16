@@ -22,7 +22,7 @@
         "php": "^7.1",
         "webeweb/core-library": "^8.0",
         "webeweb/core-bundle": "^2.20",
-        "webeweb/haveibeenpwned-library": "^3.0"
+        "webeweb/haveibeenpwned-library": "^3.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^7.0"

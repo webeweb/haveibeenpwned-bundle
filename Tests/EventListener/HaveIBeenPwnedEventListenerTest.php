@@ -20,7 +20,7 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Event\PasteAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\RangeEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener;
 use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
-use WBW\Library\HaveIBeenPwned\API\RequestInterface;
+use WBW\Library\HaveIBeenPwned\Api\RequestInterface;
 use WBW\Library\HaveIBeenPwned\Request\BreachedAccountRequest;
 use WBW\Library\HaveIBeenPwned\Request\BreachesRequest;
 use WBW\Library\HaveIBeenPwned\Request\BreachRequest;
