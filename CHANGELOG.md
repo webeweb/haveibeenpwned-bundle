@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.8.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.8.0) (2021-11-16)
+
+- Update dependencies
+
 ### [1.7.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.7.0) (2021-08-17)
 
 - Update dependencies
