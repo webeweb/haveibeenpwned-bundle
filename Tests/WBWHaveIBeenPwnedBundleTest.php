@@ -23,7 +23,7 @@ use WBW\Bundle\HaveIBeenPwnedBundle\WBWHaveIBeenPwnedBundle;
 class WBWHaveIBeenPwnedBundleTest extends AbstractTestCase {
 
     /**
-     * Tests the getContainerExtension() method.
+     * Tests getContainerExtension()
      *
      * @return void
      */

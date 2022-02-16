@@ -51,7 +51,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onBreach() method.
+     * Tests onBreach()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -71,7 +71,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onBreachedAccount() method.
+     * Tests onBreachedAccount()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -98,7 +98,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onBreaches() method.
+     * Tests onBreaches()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -118,7 +118,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onDataClasses() method.
+     * Tests onDataClasses()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -138,7 +138,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onPasteAccount() method.
+     * Tests onPasteAccount()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -164,7 +164,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the onRange() method.
+     * Tests onRange()
      *
      * @return void
      * @throws Exception Throws an exception if an error occurs.
@@ -184,7 +184,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
