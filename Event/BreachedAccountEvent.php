@@ -18,7 +18,7 @@ use WBW\Library\HaveIBeenPwned\Response\BreachesResponse;
 /**
  * Breached account event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
 class BreachedAccountEvent extends AbstractEvent {

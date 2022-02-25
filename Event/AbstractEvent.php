@@ -19,7 +19,7 @@ use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
 /**
  * Abstract event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  * @abstract
  */

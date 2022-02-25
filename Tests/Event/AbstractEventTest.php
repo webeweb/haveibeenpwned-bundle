@@ -20,7 +20,7 @@ use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
 /**
  * Abstract event test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event
  */
 class AbstractEventTest extends AbstractTestCase {

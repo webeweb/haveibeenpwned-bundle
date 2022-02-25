@@ -21,7 +21,7 @@ use WBW\Bundle\HaveIBeenPwnedBundle\Tests\AbstractTestCase;
 /**
  * HaveIBeenPwned extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\DependencyInjection
  */
 class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {

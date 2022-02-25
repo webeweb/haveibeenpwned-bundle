@@ -17,7 +17,7 @@ use WBW\Library\HaveIBeenPwned\Response\DataClassesResponse;
 /**
  * Data classes event.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Event
  */
 class DataClassesEvent extends AbstractEvent {

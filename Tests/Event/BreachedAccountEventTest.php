@@ -19,7 +19,7 @@ use WBW\Library\HaveIBeenPwned\Response\BreachesResponse;
 /**
  * Breached account event test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event
  */
 class BreachedAccountEventTest extends AbstractTestCase {

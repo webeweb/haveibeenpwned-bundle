@@ -19,7 +19,7 @@ use WBW\Library\HaveIBeenPwned\Response\DataClassesResponse;
 /**
  * Data classes event test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HaveIBeenPwnedBundle\Tests\Event
  */
 class DataClassesEventTest extends AbstractTestCase {
