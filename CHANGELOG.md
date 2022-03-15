@@ -12,8 +12,8 @@ CHANGELOG
 
 - Add PHP 8.x support
 - Add Symfony 5.x support
-
 - Improve PHPDoc
+- Update dependencies
 
 ### [1.8.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.8.0) (2021-11-16)
 
