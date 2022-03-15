@@ -107,7 +107,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
         } catch (Exception $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
-            $this->assertContains(HaveIBeenPwnedEventListener::SERVICE_NAME, $ex->getMessage());
+            $this->assertStringContainsString(HaveIBeenPwnedEventListener::SERVICE_NAME, $ex->getMessage());
         }
     }
 
