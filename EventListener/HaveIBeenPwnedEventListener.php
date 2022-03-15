@@ -14,7 +14,6 @@ namespace WBW\Bundle\HaveIBeenPwnedBundle\EventListener;
 use GuzzleHttp\Exception\GuzzleException;
 use InvalidArgumentException;
 use Psr\Log\LoggerInterface;
-use WBW\Bundle\CoreBundle\Service\LoggerTrait;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\AbstractEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachedAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachesEvent;
@@ -26,6 +25,7 @@ use WBW\Library\HaveIBeenPwned\Factory\RequestFactory;
 use WBW\Library\HaveIBeenPwned\Provider\APIv2Provider;
 use WBW\Library\HaveIBeenPwned\Request\AbstractRequest;
 use WBW\Library\HaveIBeenPwned\Response\AbstractResponse;
+use WBW\Library\Logger\LoggerTrait;
 use WBW\Library\Provider\Exception\ApiException;
 
 /**
