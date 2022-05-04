@@ -5,7 +5,6 @@ haveibeenpwned-bundle
 [![Coverage Status](https://img.shields.io/coveralls/github/webeweb/haveibeenpwned-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/haveibeenpwned-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/haveibeenpwned-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/haveibeenpwned-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
-[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 [![License](https://img.shields.io/packagist/l/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 
