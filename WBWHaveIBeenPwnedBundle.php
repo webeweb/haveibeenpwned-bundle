@@ -24,7 +24,7 @@ use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtensi
 class WBWHaveIBeenPwnedBundle extends Bundle {
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContainerExtension(): Extension {
         return new WBWHaveIBeenPwnedExtension();
