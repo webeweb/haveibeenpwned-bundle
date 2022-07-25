@@ -69,7 +69,7 @@ CHANGELOG
 
 > IMPORTANT NOTICE:
 >
-> - WBW\Library\HaveIBeenPwned\Provider\APIv2Provider::pasteAccount() is now deprecated 
+> - WBW\Library\HaveIBeenPwned\Provider\APIv2Provider::pasteAccount() is now deprecated
 
 ### [1.4.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.4.0) (2019-08-08)
 
