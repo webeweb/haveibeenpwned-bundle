@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.10.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.10.0) (2022-12-20)
+
+- Add PHP 8.2 support
+
 ### [1.9.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.9.0) (2022-03-15)
 
 > IMPORTANT NOTICE: The following Symfony versions are now not supported
