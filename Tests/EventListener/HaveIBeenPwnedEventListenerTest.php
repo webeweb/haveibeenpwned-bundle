@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\EventListener;
 
-use Exception;
+use Throwable;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachedAccountEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachesEvent;
 use WBW\Bundle\HaveIBeenPwnedBundle\Event\BreachEvent;
@@ -54,7 +54,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onBreach()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnBreach(): void {
 
@@ -74,7 +74,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onBreachedAccount()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnBreachedAccount(): void {
 
@@ -91,7 +91,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
 
             $this->assertInstanceOf(BreachedAccountRequest::class, $res->getRequest());
             $this->assertInstanceOf(BreachesResponse::class, $res->getResponse());
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ApiException::class, $ex);
         }
@@ -101,7 +101,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onBreaches()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnBreaches(): void {
 
@@ -121,7 +121,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onDataClasses()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnDataClasses(): void {
 
@@ -141,7 +141,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onPasteAccount()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnPasteAccount(): void {
 
@@ -156,7 +156,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
             $this->assertSame($breachEvent, $res);
             $this->assertInstanceOf(PasteAccountRequest::class, $res->getRequest());
             $this->assertInstanceOf(PastesResponse::class, $res->getResponse());
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ApiException::class, $ex);
             $this->assertEquals(401, $ex->getPrevious()->getCode());
@@ -167,7 +167,7 @@ class HaveIBeenPwnedEventListenerTest extends AbstractTestCase {
      * Tests onRange()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testOnRange(): void {
 

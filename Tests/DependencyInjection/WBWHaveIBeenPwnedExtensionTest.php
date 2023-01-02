@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\HaveIBeenPwnedBundle\Tests\DependencyInjection;
 
-use Exception;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Throwable;
 use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\Configuration;
 use WBW\Bundle\HaveIBeenPwnedBundle\DependencyInjection\WBWHaveIBeenPwnedExtension;
 use WBW\Bundle\HaveIBeenPwnedBundle\EventListener\HaveIBeenPwnedEventListener;
@@ -75,7 +75,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
      * Tests load()
      *
      * @return void
-     * @throws Exception Throws an exception if an error occurs.
+     * @throws Throwable Throws an exception if an error occurs.
      */
     public function testLoad(): void {
 
@@ -104,7 +104,7 @@ class WBWHaveIBeenPwnedExtensionTest extends AbstractTestCase {
         try {
 
             $this->containerBuilder->get(HaveIBeenPwnedEventListener::SERVICE_NAME);
-        } catch (Exception $ex) {
+        } catch (Throwable $ex) {
 
             $this->assertInstanceOf(ServiceNotFoundException::class, $ex);
             $this->assertStringContainsString(HaveIBeenPwnedEventListener::SERVICE_NAME, $ex->getMessage());
