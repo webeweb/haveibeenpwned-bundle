@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+### [1.11.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.11.0) (2023-01-02)
+
+- Improve code quality
+- Improve PHPDoc
+- Update LICENSE
+
 ### [1.10.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.10.0) (2022-12-20)
 
 - Add PHP 8.2 support
