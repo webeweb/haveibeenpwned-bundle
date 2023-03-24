@@ -8,7 +8,7 @@ haveibeenpwned-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/haveibeenpwned-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/haveibeenpwned-bundle)
 
-Integrate HaveIBeenPwned API with Symony 2 and more.
+Integrate HaveIBeenPwned API with Symfony 4 and more.
 
 Includes:
 
