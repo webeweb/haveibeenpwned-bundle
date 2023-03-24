@@ -1,7 +1,7 @@
 {
     "name": "webeweb/haveibeenpwned-bundle",
     "type": "symfony-bundle",
-    "description": "Integrate HaveIBeenPwned API with Symfony 2 and more",
+    "description": "Integrate HaveIBeenPwned API with Symfony 4 and more",
     "keywords": [
         "API",
         "bundle",
