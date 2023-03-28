@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### [1.12.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.12.0) (2023-03-28)
+
+- Add Symfony 6.x support
+
 ### [1.11.0](https://github.com/webeweb/haveibeenpwned-bundle/tree/v1.11.0) (2023-01-02)
 
 - Improve code quality
