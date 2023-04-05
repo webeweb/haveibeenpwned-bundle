@@ -20,6 +20,8 @@
     ],
     "require": {
         "php": "^7.1|^8.0",
+        "psr/log": "^1.0",
+        "symfony/framework-bundle": "^4.4|^5.0",
         "webeweb/core-library": "^8.34",
         "webeweb/core-bundle": "^3.0",
         "webeweb/haveibeenpwned-library": "^3.2"
